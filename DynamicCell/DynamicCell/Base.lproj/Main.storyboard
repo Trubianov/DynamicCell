@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-Yv-chr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DynamicCell" rowHeight="101" id="Fmu-Ot-aHZ" customClass="DynamicCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fmu-Ot-aHZ" id="x7b-TE-WrE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-e3-zQm">
+                                                    <rect key="frame" x="48" y="8" width="505" height="83"/>
+                                                    <color key="backgroundColor" red="1" green="0.34112562610000002" blue="0.3271853864" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="9" width="381" height="83"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Fmu-Ot-aHZ" id="iZy-pX-fzC"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="n8T-e3-zQm" firstAttribute="top" secondItem="x7b-TE-WrE" secondAttribute="top" constant="8" id="JT8-y4-OFc"/>
+                                                <constraint firstAttribute="bottom" secondItem="n8T-e3-zQm" secondAttribute="bottom" constant="9.5" id="MRN-cE-Dv0"/>
+                                                <constraint firstAttribute="trailing" secondItem="n8T-e3-zQm" secondAttribute="trailing" constant="47" id="rNz-Sk-TJH"/>
+                                                <constraint firstItem="n8T-e3-zQm" firstAttribute="leading" secondItem="x7b-TE-WrE" secondAttribute="leading" constant="48" id="stm-3B-cdj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="n8T-e3-zQm" id="LuE-2w-N7W"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-14" y="0.0" width="600" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eCQ-Om-FyO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zhP-5x-Ptq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tkc-Yv-chr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HAk-4u-BFq"/>
+                            <constraint firstItem="tkc-Yv-chr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qm8-9N-hLh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tkc-Yv-chr" secondAttribute="bottom" id="jbB-Se-hl1"/>
+                            <constraint firstAttribute="trailing" secondItem="tkc-Yv-chr" secondAttribute="trailing" id="pLK-pM-hGk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="tkc-Yv-chr" id="nxx-eR-OQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="361.5"/>
+        </scene>
+    </scenes>
+</document>
